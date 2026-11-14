@@ -75,7 +75,11 @@ class EligibilityChecker {
 		}
 
 		if ( !$file || !$file->exists() ) {
-			return StatusValue::newFatal( 'basicimageeditor-error-nofile', $title->getPrefixedText() );
+			// The name comes from the URL; as a plaintext parameter it is not read as wikitext.
+			return StatusValue::newFatal(
+				'basicimageeditor-error-nofile',
+				Message::plaintextParam( $title->getPrefixedText() )
+			);
 		}
 		if ( !$file->isLocal() ) {
 			return StatusValue::newFatal( 'basicimageeditor-error-remote' );
