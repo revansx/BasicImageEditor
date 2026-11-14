@@ -1,12 +1,16 @@
 {
 	"private": true,
 	"scripts": {
-		"test": "eslint --cache . && banana-checker i18n/",
-		"test-coverage": "eslint --cache . && banana-checker i18n/"
+		"test": "eslint --cache . && banana-checker i18n/ && npm run node-qunit",
+		"test-coverage": "npm test",
+		"node-qunit": "qunit --require ./tests/node-qunit/setup.js 'tests/node-qunit/*.test.js'"
 	},
 	"devDependencies": {
 		"eslint": "8.57.1",
 		"eslint-config-wikimedia": "0.32.6",
-		"grunt-banana-checker": "0.13.0"
+		"grunt-banana-checker": "0.13.0",
+		"jsdom": "^20.0.3",
+		"qunit": "^2.21.0",
+		"sinon": "^19.0.2"
 	}
 }
