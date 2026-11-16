@@ -10,18 +10,20 @@
 		"vendor/",
 		"node_modules/",
 		"build/",
-		"coverage/",
-		"tests/node/"
+		"coverage/"
 	],
 	"overrides": [
 		{
 			"files": [
-				"tests/qunit/**/*.js"
+				"tests/node-qunit/**/*.js"
 			],
 			"extends": [
 				"wikimedia/qunit",
-				"wikimedia/mediawiki/qunit"
-			]
+				"wikimedia/server"
+			],
+			"parserOptions": {
+				"ecmaVersion": 2022
+			}
 		},
 		{
 			"files": [

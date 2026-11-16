@@ -173,16 +173,6 @@
 			]
 		}
 	},
-	"QUnitTestModule": {
-		"localBasePath": "",
-		"remoteExtPath": "BasicImageEditor",
-		"scripts": [
-			"tests/qunit/ext.basicImageEditor.core.test.js"
-		],
-		"dependencies": [
-			"ext.basicImageEditor.core"
-		]
-	},
 	"config": {
 		"BasicImageEditorJpegQuality": {
 			"value": 92,

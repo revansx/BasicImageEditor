@@ -1,5 +1,7 @@
+'use strict';
+
 QUnit.module( 'ext.basicImageEditor.core', () => {
-	const { adjustments, geometry, state } = require( 'ext.basicImageEditor.core' );
+	const { adjustments, geometry, state } = require( '../../resources/ext.basicImageEditor.core/index.js' );
 
 	QUnit.module( 'adjustments' );
 
@@ -93,7 +95,8 @@ QUnit.module( 'ext.basicImageEditor.core', () => {
 		const bounds = geometry.rotatedBounds( 400, 300, 10 );
 		const whole = { x: 0, y: 0, width: bounds.width, height: bounds.height };
 		assert.false( geometry.isRectInsideRotatedImage( whole, 400, 300, 10 ), 'bounding box has empty corners' );
-		assert.true( geometry.isRectInsideRotatedImage( { x: 0, y: 0, width: 400, height: 300 }, 400, 300, 0 ) );
+		const image = { x: 0, y: 0, width: 400, height: 300 };
+		assert.true( geometry.isRectInsideRotatedImage( image, 400, 300, 0 ) );
 		assert.false( geometry.isRectInsideRotatedImage( { x: 0, y: 0, width: 0, height: 10 }, 400, 300, 0 ), 'empty rectangle' );
 	} );
 
@@ -118,7 +121,10 @@ QUnit.module( 'ext.basicImageEditor.core', () => {
 	QUnit.test( 'getChangedTools lists tools in summary order', ( assert ) => {
 		const unchanged = state.createInitialState();
 		assert.deepEqual( state.getChangedTools( unchanged, false ), [] );
-		const edited = Object.assign( state.createInitialState(), { straighten: 1.5, brightness: 10 } );
+		const edited = Object.assign(
+			state.createInitialState(),
+			{ straighten: 1.5, brightness: 10 }
+		);
 		assert.deepEqual( state.getChangedTools( edited, true ), [ 'crop', 'straighten', 'brightness' ] );
 	} );
 
