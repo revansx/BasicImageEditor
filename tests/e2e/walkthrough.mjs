@@ -567,7 +567,7 @@ async function testSaveNewFile( source ) {
 	const description = created.revisions[ 0 ].slots.main.content;
 	check( 'new file description: source description plus "Derived from"',
 		description.startsWith( source.revisions[ 0 ].slots.main.content.trim() ) &&
-		description.includes( `Derived from [[${ sourceTitle }]]` ),
+		description.includes( `Derived from [[:${ sourceTitle }]]` ),
 		description );
 	const entry = await uploadLogEntry( 'File:' + newName );
 	check( 'upload log: new upload, tagged basicimageeditor',

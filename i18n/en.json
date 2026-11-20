@@ -58,7 +58,7 @@
 	"basicimageeditor-summary-brightness": "brightness adjusted",
 	"basicimageeditor-summary-contrast": "contrast adjusted",
 	"basicimageeditor-summary-with-tools": "$1 (edited with BasicImageEditor)",
-	"basicimageeditor-derived-from": "Derived from [[$1]]",
+	"basicimageeditor-derived-from": "Derived from [[:$1]]",
 	"basicimageeditor-saving": "Saving…",
 	"basicimageeditor-error-result-toolarge": "The edited image is larger than this wiki's upload limit of $1, so it cannot be saved.",
 	"basicimageeditor-error-save": "The image could not be saved: $1",

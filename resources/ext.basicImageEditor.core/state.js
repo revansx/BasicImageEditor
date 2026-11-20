@@ -71,7 +71,7 @@ function splitFileName( fileName ) {
  * a line naming the source.
  *
  * @param {string|null} sourceText Wikitext of the source description page
- * @param {string} derivedLine Such as "Derived from [[File:Example.jpg]]"
+ * @param {string} derivedLine Such as "Derived from [[:File:Example.jpg]]"
  * @return {string}
  */
 function buildNewFileDescription( sourceText, derivedLine ) {

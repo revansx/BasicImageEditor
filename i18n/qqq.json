@@ -58,7 +58,7 @@
 	"basicimageeditor-summary-brightness": "Part of the default edit summary; see {{msg-mw|basicimageeditor-summary-crop}}.",
 	"basicimageeditor-summary-contrast": "Part of the default edit summary; see {{msg-mw|basicimageeditor-summary-crop}}.",
 	"basicimageeditor-summary-with-tools": "Default edit summary in the save dialog, used for both a new version and a new file. The user can edit it.\n\nParameters:\n* $1 – the tools used, for example \"Cropped, straightened, brightness adjusted\", built from {{msg-mw|basicimageeditor-summary-crop}} and the related messages.\n\n\"BasicImageEditor\" is the extension name and should not be translated.",
-	"basicimageeditor-derived-from": "Wikitext line added to the description page of a new file made from another file.\n\nParameters:\n* $1 – title of the source file, including the namespace",
+	"basicimageeditor-derived-from": "Wikitext line added to the description page of a new file made from another file. The colon before $1 makes the line a link to the source file instead of showing the image; keep it in translations.\n\nParameters:\n* $1 – title of the source file, including the namespace",
 	"basicimageeditor-saving": "Accessible label of the progress bar while saving.",
 	"basicimageeditor-error-result-toolarge": "Error when the edited image exceeds the upload size limit.\n\nParameters:\n* $1 – the limit, such as \"100 MB\"",
 	"basicimageeditor-error-save": "Error when saving fails.\n\nParameters:\n* $1 – the reason given by the wiki",

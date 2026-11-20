@@ -143,10 +143,10 @@ QUnit.module( 'ext.basicImageEditor.core', () => {
 
 	QUnit.test( 'buildNewFileDescription', ( assert ) => {
 		assert.strictEqual(
-			state.buildNewFileDescription( '== Summary ==\nA cat.\n\n[[Category:Cats]]\n', 'Derived from [[File:Cat.jpg]]' ),
-			'== Summary ==\nA cat.\n\n[[Category:Cats]]\n\nDerived from [[File:Cat.jpg]]'
+			state.buildNewFileDescription( '== Summary ==\nA cat.\n\n[[Category:Cats]]\n', 'Derived from [[:File:Cat.jpg]]' ),
+			'== Summary ==\nA cat.\n\n[[Category:Cats]]\n\nDerived from [[:File:Cat.jpg]]'
 		);
-		assert.strictEqual( state.buildNewFileDescription( '', 'Derived from [[File:Cat.jpg]]' ), 'Derived from [[File:Cat.jpg]]' );
+		assert.strictEqual( state.buildNewFileDescription( '', 'Derived from [[:File:Cat.jpg]]' ), 'Derived from [[:File:Cat.jpg]]' );
 		assert.strictEqual( state.buildNewFileDescription( null, 'X' ), 'X' );
 	} );
 

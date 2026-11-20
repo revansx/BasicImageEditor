@@ -134,7 +134,7 @@ Saving overwrites the file with a new version by default; the previous version s
 **Save targets**
 
 - *New version of this file* (default): uploaded under the same name. The file description page is not changed.
-- *New file*: the user enters a new name with the same extension. The new description page gets a verbatim copy of the source file's description page content, so its description, licence templates and categories carry over, followed by the line `Derived from [[File:<source name>]]`. If the name is already taken, the save is refused and the user picks another name; an existing file is never overwritten from this option.
+- *New file*: the user enters a new name with the same extension. The new description page gets a verbatim copy of the source file's description page content, so its description, licence templates and categories carry over, followed by the line `Derived from [[:File:<source name>]]`. If the name is already taken, the save is refused and the user picks another name; an existing file is never overwritten from this option.
 
 **Output format**
 
