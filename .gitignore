@@ -4,3 +4,5 @@
 .eslintcache
 .phpunit.result.cache
 /tests/e2e/output/
+/coverage/
+.env
