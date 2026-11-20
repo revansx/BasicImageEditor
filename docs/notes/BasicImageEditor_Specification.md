@@ -288,7 +288,7 @@ Publishing needs a public GitHub repository and a page on mediawiki.org.
 
 - [x] Confirm on mediawiki.org that no extension named BasicImageEditor exists. Two web searches found none.
 - [x] Create the public GitHub repository with README and COPYING. Published 2026-11-12 at https://github.com/revansx/BasicImageEditor.
-- [x] Create `Extension:BasicImageEditor` on mediawiki.org with the extension infobox, installation steps, settings, supported MediaWiki versions and the limitations listed above. Created 2026-11-16 with the infobox (status beta, version 0.1.0, MediaWiki 1.43+), installation and settings; the limitations section is still to be added.
+- [x] Create `Extension:BasicImageEditor` on mediawiki.org with the extension infobox, installation steps, settings, supported MediaWiki versions and the limitations listed above. Created 2026-11-16; limitations section added 2026-11-20.
 - [ ] Tag release 1.0.0.
 - [ ] Optionally register with translatewiki.net for translations.
 
