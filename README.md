@@ -4,7 +4,7 @@ A MediaWiki extension for making basic edits to an already-uploaded JPG or PNG f
 
 The extension does not change the wiki's upload workflow and needs no configuration.
 
-> **Status:** in development. All six editing tools and saving are implemented; testing against the acceptance criteria in the spec is in progress.
+> **Status:** beta (0.1.0). All six editing tools and saving are implemented and pass the acceptance tests on MediaWiki 1.43 LTS. Release 1.0.0 will follow testing on the current stable MediaWiki release.
 
 ## Requirements
 
@@ -36,7 +36,7 @@ Who may use the editor is controlled by MediaWiki's existing `upload`, `reupload
 
 ```sh
 composer install && composer test   # PHP lint and code style
-npm install && npm test             # JavaScript lint and message checks
+npm install && npm test             # JavaScript lint, message checks and QUnit tests
 ```
 
 A headless-browser walkthrough of the editor against a development wiki is described in `tests/e2e/README.md`.
