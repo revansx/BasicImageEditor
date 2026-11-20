@@ -35,17 +35,20 @@ Who may use the editor is controlled by MediaWiki's existing `upload`, `reupload
 ## Development
 
 ```sh
-composer install && composer test   # PHP lint and code style
-npm install && npm test             # JavaScript lint, message checks and QUnit tests
+npm install && npm test             # JavaScript lint, message checks and QUnit tests (in Node)
+composer install && composer lint   # PHP syntax check and file permissions
+composer phpcs                      # PHP code style
 ```
 
-A headless-browser walkthrough of the editor against a development wiki is described in `tests/e2e/README.md`.
-
-PHPUnit tests run from MediaWiki core:
+`composer test` runs the PHP checks plus PHPUnit, so it needs the extension to sit in the `extensions/` folder of a MediaWiki installation (or `MW_INSTALL_PATH` set). PHPUnit can also be run from MediaWiki core:
 
 ```sh
 composer phpunit:entrypoint -- extensions/BasicImageEditor/tests/phpunit
 ```
+
+`make ci` runs the whole suite in Docker, the same way GitHub Actions does on every push and pull request (MediaWiki 1.43 and 1.46). It uses the `build` submodule (docker-compose-ci). `make composer-phan` runs Phan static analysis.
+
+A headless-browser walkthrough of the editor against a development wiki is described in `tests/e2e/README.md`.
 
 The design is described in `docs/notes/BasicImageEditor_Specification.md`.
 

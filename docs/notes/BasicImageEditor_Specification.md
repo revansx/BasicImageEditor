@@ -205,7 +205,7 @@ BasicImageEditor/
   resources/       editor module, styles
   resources/lib/   Cropper.js
   i18n/            en.json, qqq.json
-  tests/           phpunit/, qunit/
+  tests/           phpunit/, node-qunit/, e2e/
   README.md, COPYING
 ```
 
